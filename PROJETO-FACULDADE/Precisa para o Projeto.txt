@@ -1,0 +1,7 @@
+Required to the TRAMPO
+
+npm install @angular/material
+npm install @angular/cdk
+npm install @angular/animations
+npm install bootstrap
+npm install typed.js
