@@ -9,13 +9,15 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
+import { CadastroBaseComponent } from './cadastro-base/cadastro-base.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ContentComponent,
-    FooterComponent
+    FooterComponent,
+    CadastroBaseComponent
   ],
   imports: [
     BrowserModule,
