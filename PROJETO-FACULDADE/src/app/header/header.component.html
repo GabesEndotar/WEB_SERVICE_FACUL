@@ -1,12 +1,14 @@
 <div class="wrapper-header">
     <div class="row">
         <div class="col-xs-12 col-md-8">
-            <ul class="menu-header">
-                <li><a routerLink="/cadastro"><button>Countries</button></a></li>
-                <li><button>Locations</button></li>
-                <li><button>Departments</button></li>
-                <li><button>Employees</button></li>
-            </ul>
+            <div class="col-auto my-0">
+                <div class="home-button">
+                    <a routerLink="/"><img src="https://image.flaticon.com/icons/png/512/69/69524.png" width="60"
+                            height="60"></a>
+                            <h4>Nossa Aplicação</h4>
+                            <p>PucMinas</p>
+                </div>
+            </div>
         </div>
         <div class="col-xs-12 col-md-4">
             <form>
@@ -16,16 +18,19 @@
                             <label class="form-check-label" for="autoSizingCheck2">
                                 <b>Buscar por...</b>
                             </label>
-                            <input type="text" class="form-control" id="inlineFormInputName"
-                                placeholder="Digite...">
+                            <input type="text" class="form-control" id="inlineFormInputName" placeholder="Digite...">
                         </div>
                     </div>
-                    
-                    <div class="col-auto my-1">
-                        <button type="submit" class="btn btn-primary acessar-conta">Search</button>
+                    <div class="select-buttons">
+                        <div class="col-auto my-1">
+                            <button type="submit" class="btn btn-primary acessar-conta">Search</button>
+
+                            <a routerLink="/cadastro"><button type="submit"
+                                    class="btn btn-primary acessar-conta">Cadastrar</button></a>
+                        </div>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-</div >
+</div>

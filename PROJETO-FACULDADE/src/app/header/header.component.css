@@ -20,6 +20,23 @@
     border: 3;
     color: #333;
     }
+    .select-buttons button
+    {
+        margin: 5px;
+    }
+    .home-button h4
+    {
+        font-style: italic;
+        display: inline;
+        position: relative;
+        margin: 8px;
+        top: 12px;
+        text-shadow:black;
+    }
+    .home-button p
+    {
+        position: relative;
+    }
     @media screen and (min-width: 600px) {
     .wrapper-header {
     height: 15vh;
