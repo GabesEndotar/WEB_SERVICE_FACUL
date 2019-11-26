@@ -18,3 +18,16 @@
     background-color: #dcbc81;
     font-weight: bold;
     }
+    .menu-h-cadastro li 
+    {
+    list-style: none;
+    display: inline;
+    position: relative;
+    margin: 5px;
+    font-size: 18px;
+    }
+    .menu-h-cadastro button 
+    {
+    font-size: 15px;
+    }
+        
