@@ -1,33 +1,53 @@
+<mat-tab-group>
+        <mat-tab label="FUNCIONARIOS">  
 <div class="container">
     <div class="row box-cadastro">
-        <div class="col-xs-12 col-md-12">
-            <ul class="menu-h-cadastro">
-                <li><button>Countries</button></li>
-                <li><button>Departments</button></li>
-                <li><button>Employees</button></li>
-            </ul>
-        </div>
         <div class="col-12">
-            <h3 class="text-center">Cadastro de informações</h3>
+            <h3 class="text-center">Cadastro de Funcionarios</h3>
             <form class="mt-5">
                 <div class="form-group">
-                    <input type="text" class="form-control cadastro" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" placeholder="Nome">
+                    <input type="number" class="form-control cadastro" id="exampleInputPassword1" placeholder="EMPLOYEE_ID">
                 </div>
                 <div class="form-group">
-                    <input type="number" class="form-control cadastro" id="exampleInputPassword1" placeholder="CPF">
+                    <input type="text" class="form-control cadastro" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="FIRST_NAME">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control cadastro" id="exampleInputPassword1" placeholder="E-mail">
+                    <input type="text" class="form-control cadastro" id="exampleInputPassword1" placeholder="LAST_NAME">
                 </div>
                 <div class="form-group">
-                    <input type="tel" class="form-control cadastro" id="exampleInputPassword1" placeholder="Telefone">
+                    <input type="email" class="form-control cadastro" id="exampleInputPassword1" placeholder="EMAIL">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control cadastro" id="exampleInputPassword1" placeholder="Endereço">
+                    <input type="tel" class="form-control cadastro" id="exampleInputPassword1" placeholder="PHONE_NUMBER">
+                </div>
+                <div class="form-group"><p>HIRE_DATE<p>
+                        <input type="date" class="form-control cadastro" id="exampleInputPassword1" placeholder="HIRE_DATE">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control cadastro" id="exampleInputPassword1" placeholder="JOB_ID">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control cadastro" id="exampleInputPassword1" placeholder="SALARY">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control cadastro" id="exampleInputPassword1" placeholder="COMMISSION_PCT">
+                </div>
+                <div class="form-group">
+                     <input type="text" class="form-control cadastro" id="exampleInputPassword1" placeholder="MANAGER_ID">
+                </div>
+                <div class="form-group">
+                     <input type="text" class="form-control cadastro" id="exampleInputPassword1" placeholder="DEPARTMENT_ID">
                 </div>
                 <button type="submit" class="btn btn-cadastro btn-lg">Cadastrar</button>
             </form>
         </div>
     </div>
 </div>
+  </mat-tab>
+  <mat-tab label="DEPARTAMENTOS">
+  </mat-tab>
+  <mat-tab label="CIDADES">
+    </mat-tab>
+    <mat-tab label="PAISES">
+        </mat-tab>
+</mat-tab-group>
