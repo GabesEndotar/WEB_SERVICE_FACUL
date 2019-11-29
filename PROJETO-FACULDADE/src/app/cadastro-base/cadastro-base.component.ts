@@ -45,10 +45,11 @@ columnPaises = [
   {headerName: 'REGION_ID', field: 'REGION_ID', sortable: true, filter:true}
 ];
 
-rowData = [
-    { make: 'Toyota', model: 'Celica', price: 35000 },
-];
+rowDataF : any;
+rowDataD : any;
+rowDataE : any;
+rowDataP : any;
 
 modules = AllCommunityModules;
 
-}
+} 
