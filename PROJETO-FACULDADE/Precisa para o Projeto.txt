@@ -5,4 +5,3 @@ npm install @angular/cdk
 npm install @angular/animations
 npm install bootstrap
 npm install typed.js
-npm install --save @ag-grid-community/all-modules @ag-grid-community/angular
