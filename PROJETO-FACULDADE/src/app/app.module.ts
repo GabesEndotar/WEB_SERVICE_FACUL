@@ -11,6 +11,7 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { CadastroBaseComponent } from './cadastro-base/cadastro-base.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { AgGridModule } from '@ag-grid-community/angular';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    MatTabsModule
+    MatTabsModule,
+    AgGridModule.withComponents([])
   ],
   providers: [],
   bootstrap: [AppComponent],
