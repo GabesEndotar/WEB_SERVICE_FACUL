@@ -30,4 +30,12 @@
     {
     font-size: 15px;
     }
-        
+    .box-localizar {
+        margin: 30px;
+        padding: 30px;
+        position: relative;
+        }
+    .box-localizar ag-grid-angular{
+        width: 100%;
+        height: 300px;
+    }
