@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CadastroBaseComponent } from './cadastro-base/cadastro-base.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { AgGridModule } from '@ag-grid-community/angular';
+import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,10 @@ import { AgGridModule } from '@ag-grid-community/angular';
     BrowserAnimationsModule,
     MatDialogModule,
     MatTabsModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

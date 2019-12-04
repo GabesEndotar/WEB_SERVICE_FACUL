@@ -1,8 +1,8 @@
 Required to the TRAMPO
 
-npm install @angular/material
-npm install @angular/cdk
-npm install @angular/animations
-npm install bootstrap
-npm install typed.js
+npm install --save @angular/material
+npm install --save @angular/cdk
+npm install --save @angular/animations
+npm install --save bootstrap
+npm install --save typed.js
 npm install --save @ag-grid-community/all-modules @ag-grid-community/angular
