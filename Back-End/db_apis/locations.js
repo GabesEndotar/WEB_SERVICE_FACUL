@@ -3,7 +3,7 @@ const database = require('../services/database.js');
 
 const baseQuery =
 `select 
-    location_id "id",
+    location_id "location_id",
     street_address "street_address",
     postal_code "postal_code",
     city "city",
