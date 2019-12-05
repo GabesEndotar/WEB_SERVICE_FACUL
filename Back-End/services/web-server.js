@@ -18,12 +18,18 @@ function initialize() {
     app.use(express.json({
       reviver: reviveJson
     }));
-
+  
     app.use(function(req, res, next) {
-      res.header("Access-Control-Allow-Origin", "*"); 
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-      next();
-    });
+      res.header('Access-Control-Allow-Origin', '*');
+      res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
+      res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+      // allow preflight
+      if (req.method === 'OPTIONS') {
+          res.send(200);
+      } else {
+          next();
+      }
+  });
 
     // Mount the router at /api so all its routes start with /api
     app.use('/api', router);
@@ -37,6 +43,9 @@ function initialize() {
       .on('Erro!', err => {
         reject(err);
       });
+
+
+
   });
 }
 

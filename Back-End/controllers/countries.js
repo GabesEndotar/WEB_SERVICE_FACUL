@@ -24,10 +24,10 @@ async function get(req, res, next) {
 
 module.exports.get = get;
 
-function getCountriesFromRec(req) {
+function getCountriesFromRec(res) {
   const countries = {
-    country_name: req.body.country_name,
-    region_id: req.body.region_id
+    country_name: res.country_name,
+    region_id: res.region_id
   };
 
   return countries;
@@ -35,7 +35,7 @@ function getCountriesFromRec(req) {
 
 async function post(req, res, next) {
   try {
-    let countries = getCountriesFromRec(req);
+    let countries = getCountriesFromRec(res);
 
     countries = await countries.create(countries);
 
