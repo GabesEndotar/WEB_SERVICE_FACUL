@@ -49,12 +49,30 @@ export class CadastroBaseComponent implements OnInit {
   }
   CadastrarDepartment(){
     console.log(this.department);
+    this.dataService.postDepartments(this.department).subscribe(department=>{
+      this.department = new DepartmentModel();
+      this.PreencherConteudo();
+    },err=>{
+      console.log('Erro ao Cadastrar Department, verificar console',err)
+    })
   }
   CadastrarEmployee(){
     console.log(this.employee);
+    this.dataService.postEmployees(this.employee).subscribe(employee=>{
+      this.employee = new EmployeeModel();
+      this.PreencherConteudo();
+    },err=>{
+      console.log('Erro ao Cadastrar Country, verificar console',err)
+    })
   }
   CadastrarLocation(){
     console.log(this.location);
+    this.dataService.postLocations(this.location).subscribe(location=>{
+      this.location = new LocationModel();
+      this.PreencherConteudo();
+    },err=>{
+      console.log('Erro ao Cadastrar Country, verificar console',err)
+    })
   }
 
 

@@ -40,16 +40,16 @@ export class DataService {
   postCountries(country: CountryModel) : Observable<any> {
    return this._http.post(`${this.apiUrlC}`, country);
   }
-  postDepartments(department: DepartmentModel) {
-    this._http.post(`${this.apiUrlD}`, department);
+  postDepartments(department: DepartmentModel) : Observable<any> {
+   return this._http.post(`${this.apiUrlD}`, department);
   }
 
-  postEmployees(employee: EmployeeModel) {
-    this._http.post(`${this.apiUrlE}`, employee);
+  postEmployees(employee: EmployeeModel) : Observable<any> {
+  return this._http.post(`${this.apiUrlE}`, employee);
   }
 
-  postLocations(location: LocationModel) {
-    this._http.post(`${this.apiUrlL}`, location);
+  postLocations(location: LocationModel) : Observable<any> {
+  return this._http.post(`${this.apiUrlL}`, location);
   }
   /*----------------------------DELETE----------------------------------*/
   /*----------------------------PUT----------------------------------*/
