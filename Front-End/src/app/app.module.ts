@@ -14,6 +14,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { AgGridModule } from '@ag-grid-community/angular';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './data.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DataService } from './data.service';
     MatDialogModule,
     MatTabsModule,
     AgGridModule.withComponents([]),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent],

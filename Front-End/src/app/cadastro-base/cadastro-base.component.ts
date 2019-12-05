@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AllCommunityModules } from "@ag-grid-community/all-modules";
 import { DataService } from '../data.service';
-
+import { CountryModel } from '../Models/country.model';
+import { DepartmentModel } from '../Models/department.model';
+import { EmployeeModel } from '../Models/employee.model';
+import { LocationModel } from '../Models/location.model';
+ 
 @Component({
   selector: 'app-cadastro-base',
   templateUrl: './cadastro-base.component.html',
@@ -9,6 +13,12 @@ import { DataService } from '../data.service';
 })
 export class CadastroBaseComponent implements OnInit {
 
+  /*MODELS*/
+  country: CountryModel = new CountryModel();
+  department: DepartmentModel = new DepartmentModel();
+  employee: EmployeeModel = new EmployeeModel();
+  location: LocationModel = new LocationModel();
+  /*GET*/
   countries:Array<any>;
   departments:Array<any>;
   employees:Array<any>;
@@ -28,6 +38,26 @@ export class CadastroBaseComponent implements OnInit {
     this.dataService.getLocations().subscribe(date => this.locations = date);
     this.dataService.getTodos().subscribe(date => this.todos = date);
   }
+  CadastrarCountry(){
+    console.log(this.country);
+    this.dataService.postCountries(this.country).subscribe(country=>{
+      this.country = new CountryModel();
+      this.PreencherConteudo();
+    },err=>{
+      console.log('Erro ao Cadastrar Country, verificar console',err)
+    })
+  }
+  CadastrarDepartment(){
+    console.log(this.department);
+  }
+  CadastrarEmployee(){
+    console.log(this.employee);
+  }
+  CadastrarLocation(){
+    console.log(this.location);
+  }
+
+
   columnFunc = [
     {headerName: 'EMPLOYEE_ID', field: 'employee_id', sortable: true, filter:true},
     {headerName: 'FIRST_NAME', field: 'first_name', sortable: true, filter:true},

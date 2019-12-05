@@ -8,51 +8,51 @@
                             <h3 class="text-center">Cadastro de Funcionarios</h3>
                             <form class="mt-5">
                                 <div class="form-group">
-                                    <input type="number" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="EMPLOYEE_ID">
+                                    <input type="number" name="employee_id" class="form-control cadastro" id="exampleInputPassword1" 
+                                    placeholder="EMPLOYEE_ID" [(ngModel)]="employee.employee_id">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="FIRST_NAME">
+                                    <input type="text" name="first_name" class="form-control cadastro" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="FIRST_NAME" [(ngModel)]="employee.first_name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="LAST_NAME">
+                                    <input type="text" name="last_name" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="LAST_NAME" [(ngModel)]="employee.last_name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="EMAIL">
+                                    <input type="email" name="email" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="EMAIL" [(ngModel)]="employee.email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="PHONE_NUMBER">
+                                    <input type="tel" name="phone_number" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="PHONE_NUMBER" [(ngModel)]="employee.phone_number">
                                 </div>
                                 <div class="form-group">
                                     <p>HIRE_DATE<p>
-                                            <input type="date" class="form-control cadastro" id="exampleInputPassword1"
-                                                placeholder="HIRE_DATE">
+                                            <input type="date" name="hire_date" class="form-control cadastro" id="exampleInputPassword1"
+                                                placeholder="HIRE_DATE" [(ngModel)]="employee.hire_date">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="JOB_ID">
+                                    <input type="text" name="job_id" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="JOB_ID" [(ngModel)]="employee.job_id">
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="SALARY">
+                                    <input type="number" name="salary" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="SALARY" [(ngModel)]="employee.salary">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="COMMISSION_PCT">
+                                    <input type="text" name="commission_pct" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="COMMISSION_PCT" [(ngModel)]="employee.commission_pct">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="MANAGER_ID">
+                                    <input type="text" name="manager_id" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="MANAGER_ID" [(ngModel)]="employee.manager_id">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="DEPARTMENT_ID">
+                                    <input type="text" name="department_id" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="DEPARTMENT_ID" [(ngModel)]="employee.department_id">
                                 </div>
-                                <button type="submit" class="btn btn-cadastro btn-lg">Cadastrar</button>
+                                <button type="submit" class="btn btn-cadastro btn-lg" (click)="CadastrarEmployee()">Cadastrar</button>
                             </form>
                         </div>
                     </div>
@@ -65,22 +65,22 @@
                             <h3 class="text-center">Cadastro de Departamentos</h3>
                             <form class="mt-5">
                                 <div class="form-group">
-                                    <input type="number" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="DEPARTMENT_ID">
+                                    <input type="number" name="department_id" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="DEPARTMENT_ID" [(ngModel)]="department.department_id">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="DEPARTMENT_NAME">
+                                    <input type="text" name="department_name" class="form-control cadastro" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="DEPARTMENT_NAME" [(ngModel)]="department.department_name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="MANAGER_ID">
+                                    <input type="text" name="manager_id" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="MANAGER_ID" [(ngModel)]="department.manager_id">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="LOCATION_ID">
+                                    <input type="email" name="location_id" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="LOCATION_ID" [(ngModel)]="department.location_id">
                                 </div>
-                                <button type="submit" class="btn btn-cadastro btn-lg">Cadastrar</button>
+                                <button type="submit" class="btn btn-cadastro btn-lg" (click)="CadastrarDepartment()">Cadastrar</button>
                             </form>
                         </div>
                     </div>
@@ -93,30 +93,30 @@
                             <h3 class="text-center">Cadastro de Endereços</h3>
                             <form class="mt-5">
                                 <div class="form-group">
-                                    <input type="number" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="LOCATION_ID">
+                                    <input type="number" name="location_id" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="LOCATION_ID" [(ngModel)]="location.location_id">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="STREET_ADDRESS">
+                                    <input type="text" name="street_address" class="form-control cadastro" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="STREET_ADDRESS" [(ngModel)]="location.street_address">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="POSTAL_CODE">
+                                    <input type="text" name="postal_code" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="POSTAL_CODE" [(ngModel)]="location.postal_code">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="CITY">
+                                    <input type="text" name="city" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="CITY" [(ngModel)]="location.city">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="STATE_PROVINCE">
+                                    <input type="text" name="state_province" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="STATE_PROVINCE" [(ngModel)]="location.state_province">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="COUNTRY_ID">
+                                    <input type="text" name="country_id" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="COUNTRY_ID" [(ngModel)]="location.country_id">
                                 </div>
-                                <button type="submit" class="btn btn-cadastro btn-lg">Cadastrar</button>
+                                <button type="submit" class="btn btn-cadastro btn-lg" (click)="CadastrarLocation()">Cadastrar</button>
                             </form>
                         </div>
                     </div>
@@ -129,18 +129,18 @@
                             <h3 class="text-center">Cadastro de Países</h3>
                             <form class="mt-5">
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="COUNTRY_ID">
+                                    <input type="text" name="country_id" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="COUNTRY_ID" [(ngModel)]="country.country_id">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control cadastro" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="COUNTRY_NAME">
+                                    <input type="text" name="country_name" class="form-control cadastro" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="COUNTRY_NAME" [(ngModel)]="country.country_name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" class="form-control cadastro" id="exampleInputPassword1"
-                                        placeholder="REGION_ID">
+                                    <input type="number" name="region_id" class="form-control cadastro" id="exampleInputPassword1"
+                                        placeholder="REGION_ID" [(ngModel)]="country.region_id">
                                 </div>
-                                <button type="submit" class="btn btn-cadastro btn-lg">Cadastrar</button>
+                                <button type="submit" class="btn btn-cadastro btn-lg" (click)="CadastrarCountry()">Cadastrar</button>
                             </form>
                         </div>
                     </div>
