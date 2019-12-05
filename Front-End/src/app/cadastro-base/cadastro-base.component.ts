@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AllCommunityModules } from "@ag-grid-community/all-modules";
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-cadastro-base',
@@ -8,9 +9,23 @@ import { AllCommunityModules } from "@ag-grid-community/all-modules";
 })
 export class CadastroBaseComponent implements OnInit {
 
-  constructor() { }
+  countries:Array<any>;
+  departments:Array<any>;
+  employees:Array<any>;
+  locations:Array<any>;
+  todos:Array<any>;
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.PreencherConteudo();
+  }
+  PreencherConteudo(){
+    this.dataService.getCountries().subscribe(date => this.countries = date);
+    this.dataService.getDepartments().subscribe(date => this.departments = date);
+    this.dataService.getEmployees().subscribe(date => this.employees = date);
+    this.dataService.getLocations().subscribe(date => this.locations = date);
+    this.dataService.getTodos().subscribe(date => this.todos = date);
   }
   columnFunc = [
     {headerName: 'EMPLOYEE_ID', field: 'EMPLOYEE_ID', sortable: true, filter:true},

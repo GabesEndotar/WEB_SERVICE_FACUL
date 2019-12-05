@@ -178,6 +178,13 @@
                     </ag-grid-angular>
                 </div>
             </mat-tab>
+            <mat-tab label="PAÍSES">
+                    <div class=box-localizar>
+                       <ul><li *ngFor='let c of countries'>
+                           {{c.country_id}} - {{c.country_name}}
+                       </li></ul>
+                    </div>
+                </mat-tab>
         </mat-tab-group>
     </mat-tab>
 </mat-tab-group>
