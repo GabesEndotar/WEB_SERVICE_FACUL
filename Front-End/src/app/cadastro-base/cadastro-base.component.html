@@ -152,37 +152,37 @@
         <mat-tab-group>
             <mat-tab label="FUNCIONARIOS">
                 <div class=box-localizar>
-                    <ag-grid-angular class="ag-theme-balham" [rowData]="rowDataF" [columnDefs]="columnFunc"
+                    <ag-grid-angular class="ag-theme-balham" [rowData]="employees" [columnDefs]="columnFunc"
                         [modules]="modules">
                     </ag-grid-angular>
                 </div>
             </mat-tab>
             <mat-tab label="DEPARTAMENTOS">
                 <div class=box-localizar>
-                    <ag-grid-angular class="ag-theme-balham" [rowData]="rowDataD" [columnDefs]="columnDepart"
+                    <ag-grid-angular class="ag-theme-balham" [rowData]="departments" [columnDefs]="columnDepart"
                         [modules]="modules">
                     </ag-grid-angular>
                 </div>
             </mat-tab>
             <mat-tab label="ENDEREÇOS">
                 <div class=box-localizar>
-                    <ag-grid-angular class="ag-theme-balham" [rowData]="rowDataE" [columnDefs]="columnEnd"
+                    <ag-grid-angular class="ag-theme-balham" [rowData]="locations" [columnDefs]="columnEnd"
                         [modules]="modules">
                     </ag-grid-angular>
                 </div>
             </mat-tab>
             <mat-tab label="PAÍSES">
                 <div class=box-localizar>
-                    <ag-grid-angular class="ag-theme-balham" [rowData]="rowDataP" [columnDefs]="columnPaises"
+                    <ag-grid-angular class="ag-theme-balham" [rowData]="countries" [columnDefs]="columnPaises"
                         [modules]="modules">
                     </ag-grid-angular>
                 </div>
             </mat-tab>
-            <mat-tab label="PAÍSES">
+            <mat-tab label="TODOS">
                     <div class=box-localizar>
-                       <ul><li *ngFor='let c of countries'>
-                           {{c.country_id}} - {{c.country_name}}
-                       </li></ul>
+                        <ag-grid-angular class="ag-theme-balham" [rowData]="todos" [columnDefs]="columnTodos"
+                            [modules]="modules">
+                        </ag-grid-angular>
                     </div>
                 </mat-tab>
         </mat-tab-group>
