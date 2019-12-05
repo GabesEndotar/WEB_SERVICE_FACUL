@@ -19,6 +19,12 @@ function initialize() {
       reviver: reviveJson
     }));
 
+    app.use(function(req, res, next) {
+      res.header("Access-Control-Allow-Origin", "*"); 
+      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      next();
+    });
+
     // Mount the router at /api so all its routes start with /api
     app.use('/api', router);
 
