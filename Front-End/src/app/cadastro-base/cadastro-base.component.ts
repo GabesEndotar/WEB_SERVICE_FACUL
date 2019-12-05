@@ -12,6 +12,7 @@ import { LocationModel } from '../Models/location.model';
   styleUrls: ['./cadastro-base.component.css']
 })
 export class CadastroBaseComponent implements OnInit {
+  private gridApi;
 
   /*MODELS*/
   country: CountryModel = new CountryModel();
@@ -30,6 +31,8 @@ export class CadastroBaseComponent implements OnInit {
   ngOnInit() {
     this.PreencherConteudo();
 
+  /*----------------------------------------------PREENCHER---------------------------------------------------------------------*/
+
   }
   PreencherConteudo(){
     this.dataService.getCountries().subscribe(date => this.countries = date);
@@ -38,6 +41,9 @@ export class CadastroBaseComponent implements OnInit {
     this.dataService.getLocations().subscribe(date => this.locations = date);
     this.dataService.getTodos().subscribe(date => this.todos = date);
   }
+
+  /*----------------------------------------------CADASTRAR---------------------------------------------------------------------*/
+
   CadastrarCountry(){
     console.log(this.country);
     this.dataService.postCountries(this.country).subscribe(country=>{
@@ -75,6 +81,75 @@ export class CadastroBaseComponent implements OnInit {
     })
   }
 
+/*----------------------------------------------ATUALIZAR---------------------------------------------------------------------*/
+
+  AtualizarCountry(id: any){
+    this.dataService.putCountry(id, this.country).subscribe(country=>{
+      this.country = new CountryModel();
+      this.PreencherConteudo();
+    },err=>{
+      console.log('Erro ao Atualizar Country, verificar console',err)
+    })
+  }
+  AtualizarDepartment(id: any){
+    this.dataService.putDepartments(id, this.department).subscribe(department=>{
+      this.department = new DepartmentModel();
+      this.PreencherConteudo();
+    },err=>{
+      console.log('Erro ao Atualizar Department, verificar console',err)
+    })
+  }
+  AtualizarEmployee(id: any){
+    this.dataService.putEmployees(id,this.employee).subscribe(employee=>{
+      this.employee = new EmployeeModel();
+      this.PreencherConteudo();
+    },err=>{
+      console.log('Erro ao Atualizar Country, verificar console',err)
+    })
+  }
+  AtualizarLocation(id: any){
+    this.dataService.putLocations(id,this.location).subscribe(location=>{
+      this.location = new LocationModel();
+      this.PreencherConteudo();
+    },err=>{
+      console.log('Erro ao Atualizar Country, verificar console',err)
+    })
+  }
+
+/*----------------------------------------------DELETAR---------------------------------------------------------------------*/
+
+DeletarCountry(id:any){
+  this.dataService.deleteCountry(id).subscribe(country=>{
+    this.country = new CountryModel();
+    this.PreencherConteudo();
+  },err=>{
+    console.log('Erro ao Deletar Country, verificar console',err)
+  })
+}
+DeletarDepartment(id:any){
+  this.dataService.deleteDepartments(id).subscribe(department=>{
+    this.department = new DepartmentModel();
+    this.PreencherConteudo();
+  },err=>{
+    console.log('Erro ao Deletar Department, verificar console',err)
+  })
+}
+DeletarEmployee(id:any){
+  this.dataService.deleteEmployees(id).subscribe(employee=>{
+    this.employee = new EmployeeModel();
+    this.PreencherConteudo();
+  },err=>{
+    console.log('Erro ao Deletar Country, verificar console',err)
+  })
+}
+DeletarLocation(id:any){
+  this.dataService.deleteLocations(id).subscribe(location=>{
+    this.location = new LocationModel();
+    this.PreencherConteudo();
+  },err=>{
+    console.log('Erro ao Deletar Country, verificar console',err)
+  })
+}
 
   columnFunc = [
     {headerName: 'EMPLOYEE_ID', field: 'employee_id', sortable: true, filter:true},
@@ -116,5 +191,17 @@ columnTodos = [
 ];
 
 modules = AllCommunityModules;
+
+onSelectionChanged() {
+  var selectedRows = this.gridApi.getSelectedRows();
+  var selectedRowsString = "";
+  selectedRows.forEach(function(selectedRow, index) {
+    if (index !== 0) {
+      selectedRowsString += ", ";
+    }
+    selectedRowsString += selectedRow.athlete;
+  });
+  document.querySelector("#selectedRows").innerHTML = selectedRowsString;
+}
 
 }

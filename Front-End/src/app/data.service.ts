@@ -51,7 +51,34 @@ export class DataService {
   postLocations(location: LocationModel) : Observable<any> {
   return this._http.post(`${this.apiUrlL}`, location);
   }
-  /*----------------------------DELETE----------------------------------*/
   /*----------------------------PUT----------------------------------*/
-
+  putCountry(id:any ,country: CountryModel) : Observable<any> {
+    return this._http.put(`${this.apiUrlC}`.concat('/',id), country);
+   }
+  putDepartments(id:any ,department: DepartmentModel) : Observable<any> {
+    return this._http.put(`${this.apiUrlD}`.concat(id), department);
+   }
+ 
+  putEmployees(id:any ,employee: EmployeeModel) : Observable<any> {
+   return this._http.put(`${this.apiUrlE}`.concat(id), employee);
+   }
+ 
+  putLocations(id:any ,location: LocationModel) : Observable<any> {
+   return this._http.put(`${this.apiUrlL}`.concat(id), location);
+   }
+  /*----------------------------DELETE----------------------------------*/
+  deleteCountry(id:any) : Observable<any> {
+    return this._http.delete(`${this.apiUrlC}`.concat(id));
+   }
+  deleteDepartments(id:any) : Observable<any> {
+    return this._http.delete(`${this.apiUrlD}`.concat(id));
+   }
+ 
+  deleteEmployees(id:any) : Observable<any> {
+   return this._http.delete(`${this.apiUrlE}`.concat(id));
+   }
+ 
+  deleteLocations(id:any) : Observable<any> {
+   return this._http.delete(`${this.apiUrlL}`.concat(id));
+   }
 }
